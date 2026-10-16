@@ -124,21 +124,6 @@ window.CODELABS = [
     ]
   },
   {
-    "title": "Codelabs to create Codelabs",
-    "href": "markdown-template/index.html",
-    "id": "markdown-template",
-    "authors": "Your Team",
-    "summary": "Learn how to add new Codelabs",
-    "updated": "2026-04-30T14:58:04-04:00",
-    "category": [
-      "codelabs",
-      "setup"
-    ],
-    "tags": [
-      "beginner"
-    ]
-  },
-  {
     "title": "Run MediaPipe face detection from a QNX camera with Python",
     "href": "mediapipe-camera-python/index.html",
     "id": "mediapipe-camera-python",
