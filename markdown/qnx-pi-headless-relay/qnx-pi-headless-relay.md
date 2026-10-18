@@ -242,11 +242,14 @@ headless target:
 5. Stop the retained laptop connection and verify that it stays stopped until
    you start it manually.
 
-The reference prototype was tested on a QNX 8.0.0 Quick Start Target Image on
-Raspberry Pi 5. Five consecutive SSH sessions completed, a deliberately
-stopped outbound tunnel reconnected after its bounded retry, and a 90-second
-silent command completed across the path. A C program compiled on the QNX Pi
-returned:
+The reference prototype was installed through the SD card and tested without
+Ethernet on a QNX 8.0.0 Quick Start Target Image on Raspberry Pi 5. The target
+showed `wpa_supplicant` attached to `bcm0`, and its boot hook opened the Railway
+tunnel. Five consecutive SSH sessions completed. After the outbound SSH process
+was deliberately terminated, the first two probes failed and the third
+succeeded eight seconds later. A QNX Pi reboot also returned to remote SSH after
+two startup probes, and a retained client connection stayed up for more than
+six minutes. A C program compiled on the QNX Pi returned:
 
 ```text
 Hello from the QNX Pi!
